@@ -39,5 +39,3 @@ if CONFIG.BOT_PASSWORD:
             filters = lambda msg: not msg.chat.id in STATUS.CHAT_ID
         )
     )
-    #
-    app.start()
