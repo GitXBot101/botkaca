@@ -41,5 +41,4 @@ if CONFIG.BOT_PASSWORD:
     )
 
 if __name__ == '__main__':
-    loop = asyncio.get_event_loop()
-    loop.create_task(app.start())
+    app.start()
