@@ -44,7 +44,7 @@ if __name__ == '__main__':
     loop = asyncio.get_event_loop()
     loop.create_task(app.start())
     try:
-        loop.close()
+        loop.run_forever()
     except (KeyboardInterrupt, SystemExit):
         loop.run_until_complete(app.start())
         loop.close()
