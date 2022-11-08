@@ -39,3 +39,12 @@ if CONFIG.BOT_PASSWORD:
             filters = lambda msg: not msg.chat.id in STATUS.CHAT_ID
         )
     )
+
+if __name__ == '__main__':
+    loop = asyncio.get_event_loop()
+    loop.create_task(app.start())
+    try:
+        loop.close()
+    except (KeyboardInterrupt, SystemExit):
+        loop.run_until_complete(app.start())
+        loop.close()
